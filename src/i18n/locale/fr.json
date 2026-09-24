@@ -769,6 +769,7 @@
   "components.RequestModal.pendingapproval": "Votre demande est en attente de validation.",
   "components.RequestList.RequestItem.mediaerror": "{mediaType} introuvable",
   "components.RequestList.RequestItem.deleterequest": "Supprimer la demande",
+  "components.ExternalSearch.search": "Rechercher",
   "components.RequestList.RequestItem.cancelRequest": "Annuler la demande",
   "components.RequestCard.mediaerror": "{mediaType} introuvable",
   "components.RequestCard.deleterequest": "Supprimer la demande",
