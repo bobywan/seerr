@@ -3,6 +3,7 @@ import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import CachedImage from '@app/components/Common/CachedImage';
 import ConfirmButton from '@app/components/Common/ConfirmButton';
+import ExternalSearch from '@app/components/ExternalSearch';
 import RequestModal from '@app/components/RequestModal';
 import StatusBadge from '@app/components/StatusBadge';
 import useDeepLinks from '@app/hooks/useDeepLinks';
@@ -428,7 +429,7 @@ const RequestItem = ({ request, revalidateList }: RequestItemProps) => {
           setShowEditModal(false);
         }}
       />
-      <div className="relative flex w-full flex-col justify-between overflow-hidden rounded-xl bg-gray-800 py-2 text-gray-400 shadow-md ring-1 ring-gray-700 xl:h-28 xl:flex-row">
+      <div className="relative flex w-full flex-col justify-between overflow-hidden rounded-xl bg-gray-800 py-2 text-gray-400 shadow-md ring-1 ring-gray-700 xl:min-h-28 xl:flex-row">
         {title.backdropPath && (
           <div className="absolute inset-0 z-0 w-full bg-cover bg-center xl:w-2/3">
             <CachedImage
@@ -786,6 +787,10 @@ const RequestItem = ({ request, revalidateList }: RequestItemProps) => {
                 <span>{intl.formatMessage(messages.cancelRequest)}</span>
               </ConfirmButton>
             )}
+          <ExternalSearch
+            fullWidth
+            title={isMovie(title) ? title.title : title.name}
+          />
         </div>
       </div>
     </>
