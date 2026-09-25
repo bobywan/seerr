@@ -29,3 +29,5 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}:custom-main
+          build-args: |
+            COMMIT_TAG=${{ github.sha }}
